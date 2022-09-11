@@ -1,4 +1,23 @@
+
+
+//As linhas abaixo impede que o navegador recarregue automaticamente quando enviamos um formulário :)
+
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', e => e.preventDefault());
+
+//                    !!!FIM!!!!
+//=============================================================
+//=============================================================
+
+
+
+
+
+
+
 function calc() {
+    
   const name = document.querySelector("#name").value;
   let matricula = document.querySelector("#matricula").value;
   let pBimestre = document.querySelector("#primeirobimestre");
@@ -21,5 +40,4 @@ function calc() {
   } else {
     output.innerHTML += `<p> Adivinha quem vai passar o natal com a professora?<br> Isso mesmo ${name}, sua média final foi ${media}</p>`;
   }
-  console.log(output);
 }
