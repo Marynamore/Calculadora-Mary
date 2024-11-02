@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Calculadora de Media escolar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Mary</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="img-wrapper">
-    <img src="https://www.ssu.ca/wp-content/uploads/2021/03/surface-E9NcsvbRVqo-unsplash-e1615815768341.jpg" alt="menina estudando">
-    <main class="container">
-      <h1>Calculadora de Média</h1>
-      <p class="title">Descubra qual a sua média de nota de todas as provas!</p>
+    <main class="img__wrapper">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzhmb2Z3YjBhMGo5bzhxNzNuYTlxY2UwY3hhcjIwbjFuaTR5N3ptMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0HlMoJkw6ZCGbEQ0/giphy.webp" alt="">
+        <div class="calculadora">
+            <!--Campo de entrada onde os resultados e os números são exibidos-->
+            <!--"disable"impede que o suario digite na tela-->
+            <input type="text" id="tela" disabled>
+            <div class="botoes">
+                <!--botão para limpar todo o display-->
+                <button class="botao limpar" onclick="limparTela()">C</button>
+                <!--botão para apagar o ultimo caractere-->
+                <button class="botao operador" onclick="apagarUltimo()">←</button>
+                <!--botao para inserir o operador (%)-->
+                <button class="botao operador"onclick="adicionarValor(%)">%</button>
 
-      <form class="form">
-        <div class="input-group">
-          <input type="text" class="field-name" id="name" required>
-          <label for="nome" class="field-label">Nome Completo:</label>
-        </div>
-        <div class="input-group">
-          <input type="number" class="field-name" id="matricula" required>
-          <label for="matricula" class="field-label">Nº de Matrícula</label>
-        </div>
-        <div class="input-group">
-          <label for="primeirobimestre" class="field-label-p">1º Bimestre:</label>
-          <input type="number" id="primeirobimestre" class="field" placeholder="Digite sua 1º Nota">
-        </div>
-        <div class="input-group">
-          <label for="segundobimestre" class="field-label-p">2º Bimestre:</label>
-          <input type="number" id="segundobimestre" class="field" placeholder="Digite sua 2º Nota">
-        </div>
-        <div class="input-group">
-          <label for="terceirobimestre" class="field-label-p">3º Bimestre:</label>
-          <input type="number" id="terceirobimestre" class="field" placeholder="Digite sua 3º Nota">
-        </div>
-        <div class="input-group">
-          <label for="quartobimestre" class="field-label-p">4º Bimestre:</label>
-          <input type="number" id="quartobimestre" class="field" placeholder="Digite sua 4º Nota">
-        </div>
-        <div class="input-group">
-          <textarea class="field-name" id="mensagem"></textarea>
-          <label for="mensagem" class="field-label msg">Reclame Aqui:</label>
-        </div>
-        <span class="resultado" id="output"></span>
-        <button type="submit" onclick="calc()">Calcular</button>
-      </form>
-    </main>
-  </div>
-  <footer>
-    Mary
-  </footer>
-  <script src="script.js"></script>
+                <button class="botao operador"onclick="adicionarValor(/)">÷</button>
+
+                <!--botao de enumeros de 0 a 9 e de operadores-->
+                <button class="botao" onclick="adicionarValor('7')">7</button>
+                <button class="botao" onclick="adicionarValor('8')">8</button>
+                <button class="botao" onclick="adicionarValor('9')">9</button>
+
+                <!--botão para inserir operador de multiplicação-->
+                <button class="botao operador" onclick="adicionarValor('*')">x</button>
+
+                <button class="botao" onclick="adicionarValor('4')">4</button>
+                <button class="botao" onclick="adicionarValor('5')">5</button>
+                <button class="botao" onclick="adicionarValor('6')">6</button>
+
+                <!--botao para inserir o operador de subtração '-'-->
+                <button class="botao operador" onclick="adicionarValor('-')">-</button>
+
+                <button class="botao" onclick="adicionarValor('1')">1</button>
+                <button class="botao" onclick="adicionarValor('2')">2</button>
+                <button class="botao" onclick="adicionarValor('3')">3</button>
+
+                <!--botao para inserir o operador de adição '+'-->
+                <button class="botao operador" onclick="adicionarValor('+')">+</button>
+                
+                <button class="botao zero" onclick="adicionarValor('0')">0</button>
+                <button class="botao" onclick="adicionarValor('.')">.</button>
+
+                <!--botao de igual que chama a função calcular()-->
+                <button class="botao igual" onclick="calcular('=')">=</button>
+            
+            </div>
+        </div>            
+    <main>
 </body>
 </html>
